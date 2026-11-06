@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quản lý từ vựng</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="manager">
+    <main class="manager-shell">
+      <header>
+        <div class="brand-lockup">
+          <img class="brand-icon" src="icons/icon-48.png" alt="" />
+          <div>
+            <p class="eyebrow">KHO TỪ VỰNG CÁ NHÂN</p>
+            <h1>Anh – Việt</h1>
+            <p class="muted">
+              Lưu từ và nghĩa để xem khi đọc trên website đã bật.
+            </p>
+          </div>
+        </div>
+        <div class="file-actions">
+          <button id="export" class="button secondary">Xuất JSON</button
+          ><label class="button secondary file-button"
+            >Nhập JSON<input
+              id="import-file"
+              type="file"
+              accept="application/json,.json"
+              hidden
+          /></label>
+        </div>
+      </header>
+      <section class="manager-grid">
+        <form id="entry-form" class="card editor">
+          <div class="section-title">
+            <h2 id="form-title">Thêm từ</h2>
+            <button id="cancel-edit" class="text-button" type="button" hidden>
+              Hủy sửa
+            </button>
+          </div>
+          <label
+            >Từ hoặc cụm từ<input
+              id="term"
+              maxlength="120"
+              required
+              autocomplete="off"
+              placeholder="ví dụ: take off"
+          /></label>
+          <div class="section-title senses-heading">
+            <h3>Nghĩa và loại từ</h3>
+            <button id="add-sense" class="text-button" type="button">
+              + Thêm nghĩa
+            </button>
+          </div>
+          <div id="senses"></div>
+          <button class="button primary wide" type="submit">Lưu mục từ</button>
+          <p
+            id="form-status"
+            class="status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+        <section class="card vocabulary-card">
+          <div class="section-title">
+            <div>
+              <h2>Danh sách từ</h2>
+              <p id="summary" class="muted"></p>
+            </div>
+          </div>
+          <label class="search-label"
+            >Tìm từ hoặc nghĩa<input
+              id="search"
+              type="search"
+              placeholder="Gõ để lọc danh sách…"
+          /></label>
+          <div id="entries" class="entry-list"></div>
+        </section>
+      </section>
+      <p id="page-status" class="status" role="status" aria-live="polite"></p>
+    </main>
+    <script src="core.js"></script>
+    <script src="manager.js"></script>
+  </body>
+</html>

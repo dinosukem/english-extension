@@ -1,0 +1,16 @@
+{
+  "name": "english-vocabulary-firefox-extension",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write '*.{js,html,css,json,md}' 'test/**/*.js'",
+    "format:check": "prettier --check '*.{js,html,css,json,md}' 'test/**/*.js'",
+    "test": "node --test",
+    "lint:manifest": "web-ext lint --source-dir . --warnings-as-errors",
+    "build": "web-ext build --source-dir . --artifacts-dir artifacts --overwrite-dest --ignore-files README.md package.json package-lock.json .gitignore test 'test/**' '*.txt'"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "web-ext": "^10.8.0"
+  }
+}

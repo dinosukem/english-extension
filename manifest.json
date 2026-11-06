@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Từ vựng Anh–Việt",
+  "version": "1.1.2",
+  "description": "Lưu từ vựng tiếng Anh và xem nghĩa tiếng Việt khi đọc web.",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png",
+    "128": "icons/icon-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tu-vung-anh-viet-ac633b31-4ba5-4d8b-9552-933b06d0bc13@personal.local",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "permissions": ["storage", "menus", "scripting", "activeTab"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "scripts": ["core.js", "background.js"]
+  },
+  "action": {
+    "default_title": "Từ vựng Anh–Việt",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png"
+    }
+  },
+  "options_ui": {
+    "page": "manager.html",
+    "open_in_tab": true
+  }
+}

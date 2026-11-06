@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Từ vựng Anh–Việt</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="popup">
+    <header>
+      <img class="brand-icon" src="icons/icon-48.png" alt="" />
+      <div class="brand-copy">
+        <p class="eyebrow">TỪ VỰNG CỦA BẠN</p>
+        <h1>Anh – Việt</h1>
+      </div>
+      <button
+        id="manage"
+        class="icon-button"
+        aria-label="Mở trang quản lý"
+        title="Quản lý từ"
+      >
+        ☷
+      </button>
+    </header>
+    <section class="site-card">
+      <div>
+        <strong id="site-name">Đang kiểm tra website…</strong>
+        <p id="site-hint" class="muted"></p>
+      </div>
+      <button id="toggle-site" class="button site-toggle" disabled>
+        <svg
+          class="power-icon"
+          viewBox="0 0 24 24"
+          width="15"
+          height="15"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M12 2v10" />
+          <path d="M5.64 5.64a9 9 0 1 0 12.72 0" />
+        </svg>
+        <span id="toggle-label">Bật</span>
+      </button>
+    </section>
+    <form id="quick-form" class="card">
+      <h2>Thêm nhanh</h2>
+      <label
+        >Từ hoặc cụm từ<input
+          id="term"
+          maxlength="120"
+          required
+          autocomplete="off"
+          placeholder="ví dụ: take off"
+      /></label>
+      <div class="sense-row">
+        <label>Loại từ<select id="pos"></select></label
+        ><label
+          >Nghĩa tiếng Việt<input
+            id="meaning"
+            maxlength="500"
+            required
+            placeholder="cất cánh"
+        /></label>
+      </div>
+      <button class="button primary wide" type="submit">Lưu từ</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+    <section class="card page-words">
+      <div class="section-title">
+        <h2>Từ trên trang</h2>
+        <span id="page-count" class="muted"></span>
+      </div>
+      <div id="page-list" class="word-list">
+        <p class="muted">Đang quét trang…</p>
+      </div>
+    </section>
+    <script src="core.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

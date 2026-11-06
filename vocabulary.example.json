@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "term": "book",
+      "senses": [
+        { "pos": "noun", "meaningVi": "quyển sách" },
+        { "pos": "verb", "meaningVi": "đặt chỗ" }
+      ]
+    },
+    {
+      "term": "take off",
+      "senses": [{ "pos": "phrase", "meaningVi": "cất cánh; cởi ra" }]
+    }
+  ]
+}
